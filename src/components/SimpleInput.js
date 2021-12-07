@@ -7,9 +7,8 @@ const SimpleInput = (props) => {
   const [enteredNameTouched, setEnteredNameTouched] = useState(false);
 
   const nameChangeHandler = (event) => {
-    setEnteredNameTouched(true);
     setUserName(event.target.value);
-    if (event.target.value.trim() !== '') {
+    if (event.target.value.trim() != '') {
       setIsInputValid(true);
     }
   };
@@ -17,7 +16,7 @@ const SimpleInput = (props) => {
   const onBlurHandler = () => {
     setEnteredNameTouched(true);
     if (userName.trim() == '') {
-      setIsInputValid(true);
+      setIsInputValid(false);
     }
   };
   const formSubmissionHandler = (event) => {
